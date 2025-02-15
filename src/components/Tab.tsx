@@ -1,16 +1,22 @@
 interface TabProps {
   id: number;
-  content: string;
+  title: string;
   isActive: boolean;
   onClick: () => void;
 }
 
-export const Tab = ({ id, content, isActive, onClick }: TabProps) => {
+export const Tab = ({ id, title, isActive, onClick }: TabProps) => {
   return (
-    <div>
-      <button key={id} onClick={onClick} className="flex-1 py-2 text-center">
-        {content}
-      </button>
-    </div>
+    <button
+      key={id}
+      className={`h-6 w-28 px-3 py-1 text-xs font-medium leading-[15px] transition-all duration-200 ease-in-out ${
+        isActive
+          ? "rounded border-zinc-200 bg-white text-zinc-800 shadow-[0px_0px_4px_0px_rgba(0,0,0,0.09)]"
+          : "text-zinc-400 hover:text-zinc-600"
+      }`}
+      onClick={onClick}
+    >
+      {title}
+    </button>
   );
 };

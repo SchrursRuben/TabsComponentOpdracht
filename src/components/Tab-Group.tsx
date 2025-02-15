@@ -12,12 +12,12 @@ export const TabGroup = () => {
 
   return (
     <div className="mx-auto w-full max-w-md">
-      <div className="flex">
+      <div className="flex rounded border-[0.5px] bg-zinc-100 shadow-[inset_0px_1px_1px_0px_rgba(0,0,0,0.04)]">
         {mockTabs.map((tab) => (
           <Tab
             key={tab.id}
             id={tab.id}
-            content={tab.content}
+            title={tab.title}
             isActive={activeTab === tab.id}
             onClick={() => handleTabClick(tab.id)}
           />

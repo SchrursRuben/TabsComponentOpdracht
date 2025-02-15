@@ -1,18 +1,18 @@
 export const mockTabs = [
   {
     id: 1,
-    content: "Label1",
+    title: "Label 1",
   },
   {
     id: 2,
-    content: "Label2",
+    title: "Label 2",
   },
   {
     id: 3,
-    content: "Label3",
+    title: "Label 3",
   },
   {
     id: 4,
-    content: "Label4",
+    title: "Label 4",
   },
 ];
