@@ -32,9 +32,10 @@ export const Tab = ({
       className={clsx(
         "flex h-6 items-center justify-center gap-1.5 whitespace-nowrap px-3 py-1 font-medium transition-all duration-200 ease-in-out",
         {
-          "rounded border-zinc-200 bg-white text-zinc-800 shadow-[0px_0px_4px_0px_rgba(0,0,0,0.09)]":
+          "rounded border-zinc-200 bg-white text-zinc-800 shadow-[0px_0px_4px_0px_rgba(0,0,0,0.09)] dark:border-zinc-700 dark:bg-zinc-600 dark:text-white":
             isActive,
-          "text-zinc-400 hover:text-zinc-600": !isActive,
+          "text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-200":
+            !isActive,
           "px-4 text-sm": textSize === "bigger",
           "text-xs": textSize === "smaller",
           "w-fit": width === "hug",

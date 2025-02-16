@@ -1,8 +1,9 @@
 "use client";
 
-import { TabGroup } from "~/components/Tab-Group";
+import { TabGroup } from "~/components/TabGroup";
 import { mockTabs } from "../mock-data/mockTabs";
 import { CubeIcon } from "@heroicons/react/24/outline";
+import { ThemeSwitch } from "~/components/ThemeSwitch";
 
 const Section = ({
   title,
@@ -11,7 +12,7 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="flex w-full flex-col items-start gap-4 px-20">
+  <div className="flex w-full flex-col items-start gap-4">
     <h1 className="border-b-2 text-center">{title}</h1>
     {children}
   </div>
@@ -19,7 +20,7 @@ const Section = ({
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center gap-8">
+    <main className="flex min-h-screen w-full flex-col items-start justify-center gap-8 px-20">
       <Section title="Default">
         <TabGroup tabs={mockTabs} />
       </Section>
@@ -49,6 +50,7 @@ export default function HomePage() {
           }}
         />
       </Section>
+      <ThemeSwitch />
     </main>
   );
 }
